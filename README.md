@@ -208,4 +208,7 @@ elseif picrand >= 77 and picrand <= 80:
 # 7. Ренейминг переменных
 
 energy -> food
+
 son -> energy
+
+manna -> mood
