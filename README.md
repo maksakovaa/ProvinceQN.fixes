@@ -22,7 +22,7 @@
 | `grandmahelp:204`        | `hour < 9 and hour > 20:`                             | `(hour < 9 or hour > 20):`                                       |
 
 # 2. Исправления GT / GS
-banda_studioQW:996
+## banda_studioQW:996
 
 Было:
 
@@ -36,7 +36,7 @@ gt 'dressing_room'
 gt 'zz_pornstudio','dressing_room' 
 ```
 
-`market_work:545`
+## `market_work:545`
 
 Было:
 ```QSP
@@ -46,7 +46,7 @@ gt 'rinwork','start'
 ```QSP
 gt 'market_work','start'
 ```
-npc_veronika:107
+## npc_veronika:107
 
 Было:
 ```QSP
@@ -56,7 +56,7 @@ gt 'veronika_ev5'
 ```QSP
 gt 'npc_veronika','veronika_ev5'
 ```
-npc_veronika:363
+## npc_veronika:363
 
 Было:
 ```QSP
@@ -66,7 +66,7 @@ gt 'veronika_ev7'
 ```QSP
 gt 'npc_veronika','veronika_ev7'
 ```
-Natasha_events:37
+## Natasha_events:37
 
 Было:
 ```QSP
@@ -76,7 +76,7 @@ gs 'Reaction Natasha Gossip'
 ```QSP
 gs 'Natasha_events','Reaction Natasha Gossip'
 ```
-Natasha_events:38
+## Natasha_events:38
 
 Было:
 ```QSP
@@ -87,7 +87,7 @@ gs 'Actions talk in Progress'
 gs 'Natasha_events','Actions talk in Progress'
 ```
 # 3. Исправления переменных
-fn:59
+## fn:59
 
 Было:
 ```QSP
@@ -97,7 +97,7 @@ if _tmp_dickkrand >= 99:
 ```QSP
 if _tmp_dickrand >= 99:
 ```
-fn:67
+## fn:67
 
 Было:
 ```QSP
@@ -107,7 +107,7 @@ elseif dickrand >= 25:
 ```QSP
 elseif _tmp_dickrand >= 25:
 ```
-zz_funcs:491
+## zz_funcs:491
 
 Было использование:
 ```QSP
@@ -117,9 +117,8 @@ _tmp1_dick - 2 > vagina
 ```QSP
 _set_gape_dick
 ```
-То есть логика передана в существующий механизм _set_gape_dick, вместо ошибочной проверки.
 
-zz_pornstudio_films:185
+## zz_pornstudio_films:185
 
 Было:
 ```QSP
@@ -129,7 +128,7 @@ _studio['rating']
 ```QSP
 studio['rating']
 ```
-shop:215
+## shop:215
 
 Было:
 ```QSP
@@ -141,7 +140,7 @@ item_count
 ```
 Исправление применено в двух местах.
 
-casino:908, 978, 979
+## casino:908, 978, 979
 
 Было:
 ```QSP
@@ -154,7 +153,7 @@ _cs_dealerHand
 Исправлено три места.
 
 # 4. Исправления маршрутизации
-banda_studioQW — ofis
+## banda_studioQW — ofis
 
 В обработчике ofisdialog1 были два перехода:
 ```QSP
@@ -164,9 +163,7 @@ gt 'ofis'
 ```QSP
 gt 'zz_pornstudio','main'
 ```
-Причина: отдельной рабочей ofis в актуальной структуре нет, а zz_pornstudio,'main' является существующим входом в офис.
-
-motherQW — gaptek
+## motherQW — gaptek
 
 Было найдено 3 перехода:
 ```QSP
@@ -176,9 +173,6 @@ gt 'gaptek','start'
 ```QSP
 gt 'apteka'
 ```
-Важное уточнение, которое мы подтвердили:
-
-gaptek,'start' соответствует именно apteka, а не apteka,'init'.
 
 # 5. Удаление zz_boys
 
