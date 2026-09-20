@@ -1,4 +1,5 @@
 # 1. Логические исправления
+
 | Локация                  | Было                                                  | Стало                                                            |
 | ------------------------ | ----------------------------------------------------- | ---------------------------------------------------------------- |
 | `skk_gym_cardio_zona:11` | `if i ! 1 or i ! 3 or i ! 5:`                         | `if i ! 1 and i ! 3 and i ! 5:`                                  |
@@ -22,71 +23,18 @@
 | `grandmahelp:204`        | `hour < 9 and hour > 20:`                             | `(hour < 9 or hour > 20):`                                       |
 
 # 2. Исправления GT / GS
-## banda_studioQW:996
 
-Было:
+| Локация                  | Было                                                  | Стало                                                            |
+| ------------------------ | ----------------------------------------------------- | ---------------------------------------------------------------- |
+| banda_studioQW:996       | gt 'dressing_room'                                    | gt 'zz_pornstudio','dressing_room'                               |
+| market_work:545          | gt 'rinwork','start'                                  | gt 'market_work','start'                                         |
+| npc_veronika:107         | gt 'veronika_ev5'                                     | gt 'npc_veronika','veronika_ev5'                                 |
+| npc_veronika:363         | gt 'veronika_ev7'                                     | gt 'npc_veronika','veronika_ev7'                                 |
+| Natasha_events:37        | gs 'Reaction Natasha Gossip'                          | gs 'Natasha_events','Reaction Natasha Gossip'                    |
+| Natasha_events:38        | gs 'Actions talk in Progress'                         | gs 'Natasha_events','Actions talk in Progress'                   |
 
-```QSP
-gt 'dressing_room' 
-```
-
-Стало:
-
-```QSP
-gt 'zz_pornstudio','dressing_room' 
-```
-
-## `market_work:545`
-
-Было:
-```QSP
-gt 'rinwork','start'
-```
-Стало:
-```QSP
-gt 'market_work','start'
-```
-## npc_veronika:107
-
-Было:
-```QSP
-gt 'veronika_ev5'
-```
-Стало:
-```QSP
-gt 'npc_veronika','veronika_ev5'
-```
-## npc_veronika:363
-
-Было:
-```QSP
-gt 'veronika_ev7'
-```
-Стало:
-```QSP
-gt 'npc_veronika','veronika_ev7'
-```
-## Natasha_events:37
-
-Было:
-```QSP
-gs 'Reaction Natasha Gossip'
-```
-Стало:
-```QSP
-gs 'Natasha_events','Reaction Natasha Gossip'
-```
-## Natasha_events:38
-
-Было:
-```QSP
-gs 'Actions talk in Progress'
-```
-Стало:
-```QSP
-gs 'Natasha_events','Actions talk in Progress'
-```
 # 3. Исправления переменных
+
 ## fn:59
 
 Было:
@@ -153,73 +101,34 @@ _cs_dealerHand
 Исправлено три места.
 
 # 4. Исправления маршрутизации
-## banda_studioQW — ofis
 
-В обработчике ofisdialog1 были два перехода:
-```QSP
-gt 'ofis'
-```
-Оба заменены на:
-```QSP
-gt 'zz_pornstudio','main'
-```
-## motherQW — gaptek
+| Ссылка на локацию        | Было                                                  | Стало                                                            |
+| ------------------------ | ----------------------------------------------------- | ---------------------------------------------------------------- |
+| zz_pornstudio            | gt 'ofis'                                             | gt 'zz_pornstudio','main'                                        |
+| apteka                   | gt 'gaptek','start'                                   | gt 'apteka'                                                      |
+| misha                    | gt 'GarGazel'                                         | gt 'gargazel'                                                    |
+| Nudelake                 | gt 'Nudelake'                                         | gt 'nudelake'                                                    |
+| Gadhouse                 | gt 'gadhouse'                                         | gt 'Gadhouse'                                                    |
+| Bella                    | gt 'bella'                                            | gt 'Bella'                                                       |
+| Bordel                   | gt'bordel'                                            | gt 'Bordel'                                                      |
+| Meadow                   | gt 'meadow'                                           | gt 'Meadow'                                                      |
+| MiroslavaHome            | gt 'miroslavahome'                                    | gt 'MiroslavaHome'                                               |
+| Prostitute               | gt'prostitute'                                        | gt 'Prostitute'                                                  |
+| vokzalG                  | gt 'vokzalg'                                          | gt 'vokzalG'                                                     |
+| DanceWhore               | gs 'dancewhore'                                       | gs 'DanceWhore'                                                  |
+| igorhome                 | gt 'igorHome' || gt'igorHome'                         | gt 'igorhome'                                                    |
 
-Было найдено 3 перехода:
-```QSP
-gt 'gaptek','start'
-```
-Все три заменены на:
-```QSP
-gt 'apteka'
-```
+# 5. Удаление неиспользуемых локаций
 
-## misha:153
-
-было 
+Локации:
 ```
-act 'Уйти': gt 'GarGazel'
-```
-стало
-```
-act 'Уйти': gt 'gargazel'
-```
-
-## Katlake
-Исправлен регистр названия локации (nudelake)
-```QSP
-:3 act 'Не подходить': gt 'Nudelake'
-:15 act 'Уйти': gt 'Nudelake'
-:24 act 'Уйти': gt 'Nudelake'
-:31 act 'Уйти': gt 'Nudelake'
-:41 act 'Уйти': gt 'Nudelake'
-:54 act 'Закончить': gt 'Nudelake'
-:63 act 'Закончить': gt 'Nudelake'
-:92 act 'Уйти': gt'Nudelake'
-:109 act 'Уйти': gt'Nudelake'
-:120 act 'Закончить': gt'Nudelake'
-:124 act 'Нет, пойдем отсюда': gt'Nudelake'
-:129 act 'Кэт, хватит, пошли отсюда': gt'Nudelake'
-:146 act 'Уйти': gt'Nudelake'
-```
-## lake_event
-Исправлен регистр названия локации  (nudelake)
-```QSP
-:134 act 'Уйти':gt'Nudelake'
-:148 act 'Закончить':gt'Nudelake'
-:153 act 'Уйти':gt'Nudelake'
-```
-# 5. Удаление zz_boys
-
-Локация:
-
 zz_boys
-
+_quantize1
+```
 была удалена.
 
 Перед удалением статический анализ показал отсутствие входящих вызовов из других локаций; обнаруженный self-edge не считался внешним входом.
 
-Также не создавались фиктивные _en-локации.
 
 # 6. Удаление "мертвой" ветви блока if-elseif-else
 
@@ -250,3 +159,7 @@ energy -> food
 son -> energy
 
 manna -> mood
+
+cumfrot -> cumcloth
+
+mop -> makeup

@@ -30,7 +30,6 @@
       <Location name="stat"/>
       <Location name="_NoTime"/>
       <Location name="_quantize"/>
-      <Location name="_quantize1"/>
       <Location name="1_quant_5_of_30min"/>
       <Location name="2_quant_60min"/>
       <Location name="3_otherwise"/>
