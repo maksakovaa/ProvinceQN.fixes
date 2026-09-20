@@ -174,6 +174,41 @@ gt 'gaptek','start'
 gt 'apteka'
 ```
 
+## misha:153
+
+было 
+```
+act 'Уйти': gt 'GarGazel'
+```
+стало
+```
+act 'Уйти': gt 'gargazel'
+```
+
+## Katlake
+Исправлен регистр названия локации (nudelake)
+```QSP
+:3 act 'Не подходить': gt 'Nudelake'
+:15 act 'Уйти': gt 'Nudelake'
+:24 act 'Уйти': gt 'Nudelake'
+:31 act 'Уйти': gt 'Nudelake'
+:41 act 'Уйти': gt 'Nudelake'
+:54 act 'Закончить': gt 'Nudelake'
+:63 act 'Закончить': gt 'Nudelake'
+:92 act 'Уйти': gt'Nudelake'
+:109 act 'Уйти': gt'Nudelake'
+:120 act 'Закончить': gt'Nudelake'
+:124 act 'Нет, пойдем отсюда': gt'Nudelake'
+:129 act 'Кэт, хватит, пошли отсюда': gt'Nudelake'
+:146 act 'Уйти': gt'Nudelake'
+```
+## lake_event
+Исправлен регистр названия локации  (nudelake)
+```QSP
+:134 act 'Уйти':gt'Nudelake'
+:148 act 'Закончить':gt'Nudelake'
+:153 act 'Уйти':gt'Nudelake'
+```
 # 5. Удаление zz_boys
 
 Локация:
@@ -198,6 +233,15 @@ elseif picrand >= 77 and picrand <= 80:
     gt 'house'
 ```
 Статический анализ показал, что значения 77..80 для picrand фактически не достигаются.
+
+Локация:
+
+npc_veronika:1213
+
+```QSP
+	!act 'Смотреть как Ника работает': gt 'hostel_veronika14'
+```
+удалено
 
 # 7. Ренейминг переменных
 
