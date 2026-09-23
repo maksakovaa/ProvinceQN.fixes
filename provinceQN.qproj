@@ -49,7 +49,6 @@
       <Location name="menu_notes"/>
       <Location name="menu_statistics"/>
       <Location name="menu_statistics_str_en"/>
-      <Location name="OLD_menu_notes"/>
       <Location name="Table_of_contents"/>
       <Location name="Table_of_contents_strings"/>
       <Location name="Table_of_contents_strings_en"/>

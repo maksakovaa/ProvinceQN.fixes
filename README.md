@@ -117,6 +117,11 @@ _cs_dealerHand
 | vokzalG                  | gt 'vokzalg'                                          | gt 'vokzalG'                                                     |
 | DanceWhore               | gs 'dancewhore'                                       | gs 'DanceWhore'                                                  |
 | igorhome                 | gt 'igorHome' || gt'igorHome'                         | gt 'igorhome'                                                    |
+| Poligon                  | gt 'poligon'                                          | gt 'Poligon'                                                     |
+| lake                     | gt 'Lake'                                             | gt 'lake'                                                        |
+| lakecafe                 | gt 'Lakecafe'                                         | gt 'lakecafe'                                                    |
+| Peterroom                | gt'peterroom'                                         | gt 'Peterroom'                                                   |
+| husbSex                  | gt'husbsex                                            | gt 'husbSex'                                                     |
 
 # 5. Удаление неиспользуемых локаций
 
@@ -124,8 +129,9 @@ _cs_dealerHand
 ```
 zz_boys
 _quantize1
+OLD_menu_notes
 ```
-была удалена.
+были удалены.
 
 Перед удалением статический анализ показал отсутствие входящих вызовов из других локаций; обнаруженный self-edge не считался внешним входом.
 
@@ -140,6 +146,8 @@ sex
 ```QSP
 elseif picrand >= 77 and picrand <= 80:
     gt 'house'
+if picrand >= 35 and picrand <= 37:gt'house'
+
 ```
 Статический анализ показал, что значения 77..80 для picrand фактически не достигаются.
 
@@ -163,3 +171,5 @@ manna -> mood
 cumfrot -> cumcloth
 
 mop -> makeup
+
+vital -> endurance
