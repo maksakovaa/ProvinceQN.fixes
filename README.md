@@ -173,3 +173,13 @@ cumfrot -> cumcloth
 mop -> makeup
 
 vital -> endurance
+
+lobok -> pubicHair
+
+body['breast'] -> body['breastVolume']
+
+body['tits'] -> body['breastSize']
+
+$settings['hapri_mod'] -> $settings['altView']
+
+hapri -> hcombed
